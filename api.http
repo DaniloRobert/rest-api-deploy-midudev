@@ -1,0 +1,33 @@
+### Recuperar todas las películas
+GET http://localhost:1234/movies
+
+### Recuperas una película por id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar todas las películas por un género
+GET http://localhost:1234/movies?genre=Action
+
+### Crear una película con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "Juejueju",
+    "year": 1999,
+    "duration": 1999,
+    "director": "Lana Wachowski",
+    "poster": "https://i.ebayimg.com/images/g/yokAAOSw8w1YARbm/s-l1200.jpg",
+    "genre": [
+        "Action", 
+        "Crime", 
+        "Drama"
+    ]
+}
+
+### Actualizar una película
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 2023
+}
